@@ -12,6 +12,17 @@ JobSphere is a modern job portal application designed to streamline job searches
 
 ---
 
+##Screenshots
+
+![Screenshot 2024-12-27 093209](https://github.com/user-attachments/assets/dac458b3-37f1-4635-a423-0d2c1c8acae7)
+![Screenshot 2024-12-27 094044](https://github.com/user-attachments/assets/07398e34-5efc-48f9-95ca-410f54c86ad9)
+![Screenshot 2024-12-27 101855](https://github.com/user-attachments/assets/e08413af-28f3-4f9b-a2ab-871e8dfa173c)
+![Screenshot 2024-12-27 101934](https://github.com/user-attachments/assets/95e92f29-d0b1-46ce-8c6b-4560b0b7be07)
+![Screenshot 2024-12-27 104232](https://github.com/user-attachments/assets/7f09c854-adf3-4b83-a151-6f74cdb2992e)
+![Screenshot 2024-12-27 140814](https://github.com/user-attachments/assets/1a014d77-45a9-4eb8-b568-92062abeadf9)
+![Screenshot 2024-12-27 142525](https://github.com/user-attachments/assets/d71cd73a-e0dd-4b00-af80-dbdc1121bf12)
+![Screenshot 2024-12-27 142616](https://github.com/user-attachments/assets/34a50718-abd3-45e9-a989-5f4ceb4d402f)
+
 ## Technologies Used
 
 ### Frontend
