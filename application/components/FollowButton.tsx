@@ -10,7 +10,7 @@ export default function FollowButton({ receiverId }: { receiverId: string }) {
 
   const handleSendRequest = () => {
     if (user?.user?.id && receiverId) {
-      sendConnectionRequest(user?.user?.id, receiverId);
+      sendConnectionRequest(receiverId);
       setIsFollowing(!isFollowing);
     }
   };

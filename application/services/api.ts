@@ -1,7 +1,7 @@
 import axios from "axios";
 import { Employment } from "@/store/useEmployment";
 import { useAuthStore } from "@/store/useAuthStore";
-const API_URL = "http://localhost:5000/api";
+const API_URL = "http://192.168.63.129:5000/api";
 
 const api = axios.create({
   baseURL: API_URL,

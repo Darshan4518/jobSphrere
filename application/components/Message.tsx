@@ -1,7 +1,7 @@
-import { View, ScrollView } from "react-native";
+import { View, FlatList } from "react-native";
 import { useRouter } from "expo-router";
 import { useChatStore } from "@/store/useChatStore";
-import { MessagePreviewCard } from "@/components/MessagePreviewCard(";
+import { MessagePreviewCard } from "./MessagePreviewCard(";
 
 const Messages = () => {
   const router = useRouter();
@@ -10,19 +10,21 @@ const Messages = () => {
   return (
     <View className="flex-1 bg-white">
       <View className="pt-12">
-        <ScrollView>
-          {messages?.map((message) => (
+        <FlatList
+          data={messages}
+          keyExtractor={(item) => item._id}
+          renderItem={({ item }) => (
             <MessagePreviewCard
-              key={message._id}
               platform="JobSphere"
-              content={message?.content}
-              timestamp={message?.timestamp.toDateString()}
-              onPress={() => router.push(`/chat/${message?._id}`)}
+              content={item?.content}
+              timestamp={new Date(item?.timestamp).toDateString()}
+              onPress={() => router.push(`/chat/${item?._id}`)}
             />
-          ))}
-        </ScrollView>
+          )}
+        />
       </View>
     </View>
   );
 };
+
 export default Messages;

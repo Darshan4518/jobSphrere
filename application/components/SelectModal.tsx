@@ -1,4 +1,4 @@
-import { View, Text, Modal, TouchableOpacity, ScrollView } from "react-native";
+import { View, Text, Modal, TouchableOpacity, FlatList } from "react-native";
 import { X } from "lucide-react-native";
 
 interface SelectModalProps {
@@ -28,28 +28,30 @@ export function SelectModal({
               <X className="w-6 h-6" />
             </TouchableOpacity>
           </View>
-          <ScrollView className="max-h-[70%]">
-            {options.map((option) => (
+          <FlatList
+            data={options}
+            keyExtractor={(item) => item}
+            renderItem={({ item }) => (
               <TouchableOpacity
-                key={option}
                 onPress={() => {
-                  onSelect(option);
+                  onSelect(item);
                   onClose();
                 }}
                 className={`p-4 border-b border-gray-100 ${
-                  selectedOption === option ? "bg-blue-50" : ""
+                  selectedOption === item ? "bg-blue-50" : ""
                 }`}
               >
                 <Text
                   className={`${
-                    selectedOption === option ? "text-blue-500" : ""
+                    selectedOption === item ? "text-blue-500" : ""
                   }`}
                 >
-                  {option}
+                  {item}
                 </Text>
               </TouchableOpacity>
-            ))}
-          </ScrollView>
+            )}
+            contentContainerStyle={{ maxHeight: "70%" }}
+          />
         </View>
       </View>
     </Modal>

@@ -100,13 +100,6 @@ export default function SignUp() {
               Sign In
             </Link>
           </View>
-          <TouchableOpacity
-            onPress={() => {
-              AsyncStorage.clear();
-            }}
-          >
-            <Text>Clear</Text>
-          </TouchableOpacity>
         </View>
       </ScrollView>
     </View>
